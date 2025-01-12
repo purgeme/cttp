@@ -4,6 +4,7 @@
 #include <netinet/in.h>
 
 #define BUFFER_SIZE 16000
+#define DEFAULT_FILENAME "test.html"
 
 struct Server {
     int domain;
@@ -20,6 +21,7 @@ struct Server {
 };
 
 struct Server server_Constructor(int domain, int port, int service, int protocol, int backlog, u_long interface, void(*launch)(struct Server *server));
+
 void launch(struct Server *server);
 
 #endif // !server_h
